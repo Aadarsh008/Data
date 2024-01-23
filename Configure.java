@@ -25,15 +25,8 @@ public class Configure {
  { 
 	 
 	 XSSFWorkbook workbook = new XSSFWorkbook(); 
- 
 	 XSSFSheet spreadsheet = workbook.createSheet(" Customer Data "); 
 	 
-	 //XSSFRow row;
-	 //Map<Integer,String> data = new HashMap<>();
-	 
-	 
-	//row = spreadsheet.createRow(0);
-	//XSSFCell cell
 	 Row row = spreadsheet.createRow(0);
 		Cell cell = row.createCell(0);
 		cell.setCellValue("Name");
@@ -53,17 +46,11 @@ public class Configure {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	} 
-	  
-	        
- 
  } 
  
-
-	
-	public static void main(String[] args) throws Exception
+public static void main(String[] args) throws Exception
     {
-        String url
-            = "jdbc:mysql://localhost:3306/employee";
+        String url= "jdbc:mysql://localhost:3306/employee";
         String username = "root"; 
         String password = "";
         String query
@@ -86,11 +73,7 @@ public class Configure {
             con.close(); // close connection
             System.out.println("Connection Closed....");
             
-          //  createExcel(name);
-     
-	
-	
-
-    }
+           createExcel(name);
+      }
 	
 }
